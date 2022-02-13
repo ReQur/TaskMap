@@ -9,7 +9,7 @@ CREATE TABLE `task` (
   `coordinates` VARCHAR(255),
   PRIMARY KEY (`userId`),
   CONSTRAINT `fk_task_user_userId`
-    FOREIGN KEY (`userId`)
+    FOREIGN KEY (`taskId`)
     REFERENCES `user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION

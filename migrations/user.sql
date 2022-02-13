@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS `user` (
     `firstName` VARCHAR(255) NOT NULL,
     `lastName` VARCHAR(255) NOT NULL,
     `md5PasswordHash` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`userId`),
-    )
+    PRIMARY KEY (`userId`)
+);
