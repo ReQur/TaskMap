@@ -4,8 +4,9 @@
 $result = $conn->query("SELECT * FROM board");
 while ($row = $result->fetch()) {
     echo '<tr>';
-    echo '<td>' . $row['id'] . '</td><td>' . $row['boardName'] . '</td>';
+    echo '<td>' . $row['createdDate'] . '</td><td>' . $row['boardName'] . '</td>';
     echo '<td><a href=delete-board.php?id='.$row['boardId'].'>Delete</a></td>';
+    echo '<td><a href=http://localhost/TaskMap/index.php?page=t&boardId='.$row['boardId'].' >Open</a></td>';
     echo '</tr>';
 }
 ?>
@@ -15,3 +16,4 @@ while ($row = $result->fetch()) {
     <input type="text" name="name">
     <input type="submit" value="Create">
 </form>
+
