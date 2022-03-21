@@ -15,8 +15,7 @@
         echo '<td>'.$row['createdDate'].'</td>
               <td>'.$row['label'].'</td>
               <td>'.$row['text'].'</td>';
-
-        echo '<td><a href=delete-task.php?id='.$row['taskId'].'>Delete</a></td>';
+                echo '<td><a href=delete-task.php?id='.$row['taskId'].'&boardId='.$_GET['boardId'].'>Delete</a></td>';
         echo '</tr>';
     }
     ?>

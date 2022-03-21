@@ -11,9 +11,9 @@ while ($row = $result->fetch()) {
 }
 ?>
 </table>
-<h2>Create new board</h2>
-<form method="get" action="create-board.php">
-    <input type="text" name="name">
-    <input type="submit" value="Create">
+<h3>Create new board</h3>
+<form method="get" action="create-board.php" class="input-group mb-3" style="width:300px;">
+    <input type="text" name="name" class="form-control" placeholder="Board Name" aria-label="BoardName" aria-describedby="button-addon2">
+    <input type="submit" value="Create" class="btn btn-outline-secondary" id="button-addon2">
 </form>
 

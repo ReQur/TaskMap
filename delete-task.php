@@ -12,6 +12,6 @@
         $_SESSION['msg'] = "Deletion Error: " . $error->getMessage();
     }
     // перенаправление на главную страницу приложения
-    header('Location: http://localhost/TaskMap/index.php?page=t');
+    header('Location: http://localhost/TaskMap/index.php?page=t&boardId='.$_GET['boardId'].'');
     exit( );
 ?>
