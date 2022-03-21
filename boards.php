@@ -1,7 +1,7 @@
 <h1>Boards:</h1>
 <table border='1'>
 <?php
-$result = $conn->query("SELECT * FROM board");
+$result = $conn->query('SELECT * FROM board WHERE userId='.$_SESSION['userId']);
 while ($row = $result->fetch()) {
     echo '<tr>';
     echo '<td>' . $row['createdDate'] . '</td><td>' . $row['boardName'] . '</td>';
