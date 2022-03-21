@@ -8,5 +8,10 @@
                 Description: <input type="text" name="description">
            </label>
 
+         <p><label>
+         <?php
+                 echo 'BoardId: <input type="text" name="boardId" value="'.$_GET['boardId'].'"readonly>';
+         ?>
+            </label>
         <p><input type="submit" value="Create">
     </form>

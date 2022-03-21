@@ -20,6 +20,6 @@
     else $_SESSION['msg'] = "Error: board name should contains at least 3 characters";
 
     // перенаправление на главную страницу приложения
-    header('Location: http://localhost/TaskMap/index.php?page=t');
+    header('Location: http://localhost/TaskMap/index.php?page=t&boardId='.$_GET['boardId'].'');
     exit( );
 ?>
