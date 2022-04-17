@@ -9,12 +9,25 @@
     require "menu.php";
     switch ($_GET['page']){
         case 'b':
-            require "boards.php";
+            if (isset($_SESSION['login'])){
+                require "boards.php";
+            }
+            else{
+                echo 'Authenticate to get access';
+            }
             break;
         case 't':
             if (isset($_SESSION['login'])){
                 require "open-board.php";
                 require "task-form.php";
+            }
+            else{
+                echo 'Authenticate to get access';
+            }
+            break;
+        case 'a':
+            if (isset($_SESSION['login'])){
+                require "avatar-form.php";
             }
             else{
                 echo 'Authenticate to get access';

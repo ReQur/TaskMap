@@ -4,7 +4,7 @@
     if (isset($_POST["login"]) and $_POST["login"]!='')
     {
         try {
-            $sql = 'SELECT userId, firstName, lastName, md5PasswordHash FROM user WHERE email=(:login)';
+            $sql = 'SELECT userId, firstName, lastName, md5PasswordHash, avatar FROM user WHERE email=(:login)';
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(':login', $_POST['login']);
             $stmt->execute();
@@ -25,6 +25,7 @@
                 $_SESSION['firstName'] = $row['firstName'];
                 $_SESSION['lastName'] = $row['lastName'];
                 $_SESSION['userId'] = $row['userId'];
+                $_SESSION['avatar'] = $row['avatar'];
                 //if ($row['is_teacher']==1) $_SESSION['teacher'] = true;
                 $msg =  "Successfully authenticate";
                 }

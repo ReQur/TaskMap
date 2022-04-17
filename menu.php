@@ -12,10 +12,22 @@
       </ul>
       <div class="d-flex">
         <?php
-            if (!isset($_SESSION['login']))
+            if (!isset($_SESSION['login'])){
                 require("login.php");
-            else
-                echo "<a href='?logout=1'>Exit</a>";
+            }
+            else{
+                echo '<ul class="navbar-nav me-auto mb-2 mb-md-0">';
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link active" aria-current="page" href="http://localhost/TaskMap/index.php?page=a">Avatar</a>';
+                echo '</li>';
+                echo '<li class="nav-item">';
+                echo '<img aria-current="page" style="width: 30;height: 30; margin-left: 50px" src="'.$_SESSION['avatar'].'" alt="Нет картинки">';
+                echo '</li>';
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link active" aria-current="page" href="?logout=1">Exit</a>';
+                echo '</li>';
+                echo '</ul>';
+            }
         ?>
       </div>
     </div>
